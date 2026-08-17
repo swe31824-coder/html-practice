@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday Surprise</title>
+        <style>
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+            body{
+                height:100vh;
+                overflow: hidden;
+                background: linear-gradient(135deg,#ff9a9e);
+                font-family: Arial,sans-serif;
+                text-align: center;
+            }
+            #heartScreen{
+                height: 100vh;
+                position: relative;
+            }
+            .title{
+                color: white;
+                padding-top: 60px;
+                font-size: 32px;
+            }
+            .heart{
+                position: absolute;
+                border-top: -80px;
+                font-size: 45px;
+                cursor:pointer;
+                animation: floatUp 6s linear infinite;
+            }
+            
+            . h1 {left: 10%; animation-delay: 0s;}
+            . h2 {left: 30%; animation-delay: 2s;}
+            . h3 {left: 50%; animation-delay: 1s;}
+            . h4 {left: 70%; animation-delay: 3s;}
+            . h5 {left: 85%; animation-delay: 4s;}
+            @keyframes floatUp{
+                0%{
+                    transform:translateY(0)scale(0.8);
+                    opacity:0;
+                }
+                20%{
+                    opacity:1;
+                }
+                100%{
+                    transform:translateY(-100vh)scale(1.3);
+                    opacity:0;
+                }
+            }
+            #nameScreen{
+                display: none;
+                height:100vh;
+                padding-top: 180px;
+                color:white;
+            }
+            #nameScreen h1{
+                font-size: 50px;
+                animation: zoom 1s ease;
+            }
+            button{
+                margin-top: 30px;
+                padding: 14px 28px;
+                border: none;
+                border-radius: 25px;
+                background: white;
+                color: #ff5c8a;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            button:hover{
+                transform: scale(1.1);
+            }
+            #message screen{
+                display:happy birthday dear;
+                height:100vh;
+                padding:150px 20px;
+                color:white;
+            }
+            #message screen p{
+                font-size: 23px;
+                margin-top: 25px;
+                line-height:1.6;
+            }
+            @keyframes zoom{
+                from{
+                    transition: scale(0);
+                    opacity:1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="heartscreen">
+            <h1 class="title">small surprise</h1>
+            <div class="heart h1"onclick="showName()">💕</div>
+        </div>
+        <div class="heart h2"onclick="showName()">💖</div>
+        <div class="heart h3"onclick="showName()">❤</div>
+        <div class="heart h4"onclick="showName()">💗</div>
+        <div class="heart h5"onclick="showName()">💙</div></div>
+        <div id="name screen">
+            <h1>🥳😍Appie BIrthday😎</h1>
+            <h2 style="margin-top:20px;">
+                Dear INDU💗💝💕
+            </h2>
+            <button onclick="showMessage">
+                continue
+            </button>
+        </div>
+        <div id="messageScreen">
+            <h1>🧁Appie Birthday,INDU !🍫🍬</h1>
+            <p>
+                wishing you a wonderful day😍
+                <br>
+                May your day be filled with happiness,🥰<br>
+                beautiful memories and lots of loves🤗💞❣💗<br><br>
+                Have an amazing yeat ahead!🥰😍
+            </p>
+        </div>
+        <script>
+            function showName(){
+                document.getElementById("heartScreen").style.display="none";
+                document.getElementById("nameScreen").style.display="block";
+            }
+
+            fuction showMessage(){
+                document.getElementById("nameScreen").style.display="none";
+                document.getElementById("messageScreen").style.display="block";
+            }
+        </script>
+        </body>   
+</html
